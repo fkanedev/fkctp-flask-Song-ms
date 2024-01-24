@@ -4,11 +4,11 @@ echo " Setting up Capstone Environment"
 echo "****************************************"
 
 sudo apt-get update
-echo "Installing Python 3.8 Virtual Environment"
-sudo DEBIAN_FRONTEND=noninteractive apt-get install -y python3.8-venv
+echo "Installing Python 3.10 Virtual Environment"
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -y python3.10-venv
 
-echo "Making Python 3.8 the default..."
-sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 1
+echo "Making Python 3.10 the default..."
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 1
 
 
 
