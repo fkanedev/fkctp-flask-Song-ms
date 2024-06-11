@@ -28,7 +28,7 @@ The main objective of this project is to create a microservice for retrieving so
 - Utilize Flask framework for building the microservice.
 - Integrate MongoDB for data storage and retrieval.
 - Integrate with a Django-based main application as part of a larger backend architecture.
-- 
+
 ## 2. Technologies Used <a name="technologies-used"></a>
 
 ### Programming Languages:
@@ -40,7 +40,6 @@ The main objective of this project is to create a microservice for retrieving so
 - pymongo: A Python driver for MongoDB.
 - gunicorn: A Python WSGI HTTP Server for UNIX.
 - pytest: A framework for testing Python code.
-- coverage: A tool for measuring code coverage of Python programs.
 
 ## 3. Installation and Configuration <a name="installation-configuration"></a>
 
@@ -76,23 +75,64 @@ Ensure the Python environment is properly set up with Python 3.8. Dependencies s
 ## 4. Usage <a name="usage"></a>
 
 ### Usage Instructions:
-To start the application, use the following command:
+To start the MongoDB server, use the following command:
 ```bash
-flask run
+start_mongo
+```
+To start the Flask application, use the following command:
+```bash
+MONGODB_SERVICE=localhost MONGODB_USERNAME=root MONGODB_PASSWORD=password flask --app app run --debugger --reload
+```
+Replace MONGODB_SERVICE and MONGODB_PASSWORD with your own values. The MONGODB_USERNAME variable should stay as root. 
+Since your main application is in a file called app.py, you don't have to specify it. The following command has the same result:
+```bash
+MONGODB_SERVICE=localhost MONGODB_USERNAME=root MONGODB_PASSWORD=password flask run --reload --debugger
 ```
 ### Use Case Examples:
-- Retrieve all songs: GET /song
+- Retrieve all songs:
+```bash
+curl --request GET -i -w '\n' --url http://localhost:5000/song
+```
 - Retrieve a song by ID: GET /song/<id>
+```bash
+curl --request GET -i -w '\n' --url http://localhost:5000/song/1
+```
 - Add a new song: POST /song
+```bash
+curl --request POST \
+-i -w '\n' \
+--url http://localhost:5000/song \
+--header 'Content-Type: application/json' \
+--data '{
+        "id": 323,
+        "lyrics": "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.\n\nPraesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
+        "title": "in faucibus orci luctus et ultrices"
+    }'
+```
 - Update an existing song: PUT /song/<id>
+```bash
+curl --request PUT \
+-i -w '\n' \
+--url http://localhost:5000/song/1 \
+--header 'Content-Type: application/json' \
+--data '{
+        "lyrics": "yay hey yay yay",
+        "title": "yay song"
+    }'
+```
 - Delete a song: DELETE /song/<id>
+```bash
+curl --request DELETE \
+-i -w '\n' \
+--url http://localhost:5000/song/14 \
+--header 'Content-Type: "application/json"'
+```
 
 ## 5. Development <a name="development"></a>
 
 ### Project Structure:
 This backend project is primarily organized around the Flask framework. The directory structure includes the following folders:
 
-- `.github/workflows/`: Contains the GitHub Actions workflows, specifically `workflow.yml`, which defines the CI pipeline for linting and testing.
 - `backend/`: Contains the core of the microservice, specifically `routes.py`, which defines the API endpoints and their logic.
 - `backend/data`: Contains the all data about songs lyrics, in `songs.json` file.
 - `tests/`: Contains the unit tests for the microservice, specifically `test_routes.py`, which tests the functionality of the API endpoints.
