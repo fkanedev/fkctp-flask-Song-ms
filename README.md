@@ -5,7 +5,7 @@
 
 # Songs Microservice Project
 
-This project involves developing a microservice for retrieving song lyrics and implementing CRUD endpoints. Its primary goal is to showcase the practical application of Flask and MongoDB in a real-world scenario. It's part of my training in the IBM Back-End Development Professional Certificate, utilizing a template provided by IBM Developer Skills Network.
+This project involves developing a microservice for retrieving song lyrics and implementing CRUD endpoints. Its primary goal is to showcase the practical application of Flask and MongoDB in a real-world scenario. It's part of my training in the [IBM Back-End Development Professional Certificate](https://www.coursera.org/professional-certificates/ibm-backend-development), utilizing a [template](https://github.com/ibm-developer-skills-network/hvlga-Back-End-Development-Songs) provided by IBM Developer Skills Network.
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -167,11 +167,11 @@ The data model for this project includes the following fields for a song:
 
 ## 6. Sources <a name="sources"></a>
 
-- **Template: [IBM Developer Skills Network - CI/CD Final Project Template](https://github.com/ibm-developer-skills-network/vselh-ci-cd-final-project-template)**
+- **Template: [IBM Developer Skills Network - Songs service template](https://github.com/ibm-developer-skills-network/hvlga-Back-End-Development-Songs)**
 
 - **Useful links**:
-  - **[Continuous Integration and Continuous Delivery (CI/CD)](https://www.coursera.org/learn/continuous-integration-and-continuous-delivery-ci-cd/home/week/1)**
-  - **[IBM DevOps and Software Engineering Professional Certificate](https://www.coursera.org/professional-certificates/devops-and-software-engineering)**
+  - **[Back-end Application Development Capstone Project](https://www.coursera.org/learn/backend-development-capstone-project/home/module/2)**
+  - **[IBM Back-End Development Professional Certificate](https://www.coursera.org/professional-certificates/ibm-backend-development)**
 
 ## 7. License <a name="license"></a>
 
