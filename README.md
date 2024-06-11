@@ -71,6 +71,9 @@ Ensure the Python environment is properly set up with Python 3.8. Dependencies s
 
 ### Environment Variables:
 - `FLASK_ENV=development`
+- `MONGODB_SERVICE=localhost`
+- `MONGODB_USERNAME=root`
+- `MONGODB_PASSWORD=password`
 
 ## 4. Usage <a name="usage"></a>
 
