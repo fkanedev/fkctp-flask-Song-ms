@@ -7,6 +7,10 @@
 
 This project involves developing a microservice for retrieving song lyrics and implementing CRUD endpoints. Its primary goal is to showcase the practical application of Flask and MongoDB in a real-world scenario. It's part of my training in the [IBM Back-End Development Professional Certificate](https://www.coursera.org/professional-certificates/ibm-backend-development), utilizing a [template](https://github.com/ibm-developer-skills-network/hvlga-Back-End-Development-Songs) provided by IBM Developer Skills Network.
 
+# Topics
+
+`Python 3.9`, `Flask`, `MongoDB`, `CRUD Operations`, `Microservices`, `Pymongo`, `Gunicorn`, `Pytest`, `REST API`, `JSON`, `IBM Back-End Development`, `MIT License`
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Technologies Used](#technologies-used)
